@@ -12,7 +12,7 @@ Setting up doesn't seem to hard... Just following simple intructions to be hones
 
 After:
 
-
+As I thought, setting was not bad at all. I feel like the steps could have been slightly more clear, but overall pretty straight forward. I'll be working on the game's engine tomorrow... I'm nervous but excited to start!
 
 ## Game Engine
 
