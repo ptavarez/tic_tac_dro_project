@@ -7,9 +7,11 @@ Hey team! I'm going to create some form of blog as I code my first project. The 
 ## Setting Up (Feb 6)
 
 Before:
+
 Setting up doesn't seem to hard... Just following simple intructions to be honest. I just finished downloading this template (thanks GA!). Next I have to set up a github repo, and then I have to deploy. Easier typed than done though.
 
 After:
+
 
 
 ## Game Engine
