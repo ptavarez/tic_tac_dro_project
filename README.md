@@ -14,7 +14,15 @@ After:
 
 As I thought, setting was not bad at all. I feel like the steps could have been slightly more clear, but overall pretty straight forward. I'll be working on the game's engine tomorrow... I'm nervous but excited to start!
 
-## Game Engine
+## Game Engine (Feb 7)
+
+Before:
+
+For what ever reason, this part seems to be the most intimidating to me. Creating the game's logic seems hard, but I hope it's not too bad. The goal is to create an empty board in JS, add to the board with X and O rotating beteen turns without choosing occupied spots, and then checking for a winner.
+
+After:
+
+
 
 
 ## Authentication
