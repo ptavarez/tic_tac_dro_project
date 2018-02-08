@@ -22,9 +22,13 @@ For what ever reason, this part seems to be the most intimidating to me. Creatin
 
 After:
 
-Just finished up the game's logic. I feel like I did a bad job making my code DRY, but I believe I have a functioning board, so that's all I should be worried about right now. The hardest part for me was figuring out a way of checking the board for a winner. I ended up hardcoding every possibility for both players to win, and it works. I even have a way for X and O to switch off anytime the addToBoard function is invoked. Once I meet all requirements, I'll work on a better way of determining the winner.  
+Just finished up the game's logic. I feel like I did a bad job making my code DRY, but I believe I have a functioning board, so that's all I should be worried about right now. The hardest part for me was figuring out a way of checking the board for a winner. I ended up hardcoding every possibility for both players to win, and it works. I even have a way for X and O to switch off anytime the addToBoard function is invoked. Once I meet all requirements, I'll work on a better way of determining the winner.
 
-## Authentication
+## Authentication (Feb 8)
+
+Before:
+
+Now that I'm done with the game's logic (I think), it's time to make some curl requests and start being buddies wiht the API. Making curl requests is a little fuzzy to me, but I hope I could make this work. After I successfully made curl requests to the API to sign up, sign in, change password, and sign out, I have to make sure I get success or failure messages. 
 
 
 ## Game UI
