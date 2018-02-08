@@ -19,8 +19,27 @@ const onSignUp = function (event) {
     })
 }
 
+const onSignIn = function (event) {
+  event.preventDefault()
+
+  const data = getFormFields(this)
+  console.log('data is ', data)
+  api.signIn(data)
+    .then(function (data) {
+      $('#signIn-message').text('Signed In Successfully')
+      $('#signIn-message').css('background-color', 'green')
+      console.log(data)
+    })
+    .catch(function (error) {
+      $('#signIn-message').text('Sign In Error')
+      $('#signIn-message').css('background-color', 'red')
+      console.error(error)
+    })
+}
+
 const addHandlers = () => {
-  $('.form-inline').on('submit', onSignUp)
+  $('.sign-up-form').on('submit', onSignUp)
+  $('.sign-in-form').on('submit', onSignIn)
 }
 
 module.exports = {

@@ -1,4 +1,5 @@
 # sh scripts/json/sign-up.sh
+# EMAIL=test@yahooo.com PASSWORD=test PASSWORD_CONFIRMATION=test sh scripts/json/sign-up.sh
 
 curl "http://tic-tac-toe.wdibos.com/sign-up" \
   --include \
