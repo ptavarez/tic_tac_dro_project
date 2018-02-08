@@ -14,7 +14,7 @@ After:
 
 As I thought, setting was not bad at all. I feel like the steps could have been slightly more clear, but overall pretty straight forward. I'll be working on the game's engine tomorrow... I'm nervous but excited to start!
 
-## Game Engine (Feb 7)
+## Game Engine (Feb 7 - 8)
 
 Before:
 
@@ -22,8 +22,7 @@ For what ever reason, this part seems to be the most intimidating to me. Creatin
 
 After:
 
-
-
+Just finished up the game's logic. I feel like I did a bad job making my code DRY, but I believe I have a functioning board, so that's all I should be worried about right now. The hardest part for me was figuring out a way of checking the board for a winner. I ended up hardcoding every possibility for both players to win, and it works. I even have a way for X and O to switch off anytime the addToBoard function is invoked. Once I meet all requirements, I'll work on a better way of determining the winner.  
 
 ## Authentication
 
