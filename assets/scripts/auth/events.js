@@ -1,6 +1,8 @@
+'use strict'
+
 const api = require('./api')
 const getFormFields = require('../../../lib/get-form-fields')
-const store = require('../store')
+const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -8,16 +10,8 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   console.log('data is ', data)
   api.signUp(data)
-    .then(function (data) {
-      $('#signUp-message').text('Signed Up Successfully')
-      $('#signUp-message').css('background-color', 'green')
-      console.log(data)
-    })
-    .catch(function (error) {
-      $('#signUp-message').text('Sign Up Error')
-      $('#signUp-message').css('background-color', 'red')
-      console.error(error)
-    })
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {
@@ -26,36 +20,24 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   console.log('data is ', data)
   api.signIn(data)
-    .then(function (data) {
-      $('#signIn-message').text('Signed In Successfully')
-      $('#signIn-message').css('background-color', 'green')
-      console.log(data)
-      store.user = data.user
-    })
-    .catch(function (error) {
-      $('#signIn-message').text('Sign In Error')
-      $('#signIn-message').css('background-color', 'red')
-      console.error(error)
-    })
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
 const onChangePassword = function (event) {
   console.log('in on change password')
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
-  console.log('just befre store.user')
-  console.log(store.user.id + ' within event')
   api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
-    .then(function () {
-      $('#signOut-message').text('Signed Out Successfully')
-      $('#sign-out').css('background-color', 'green')
-    })
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
 }
 
 const addHandlers = () => {
