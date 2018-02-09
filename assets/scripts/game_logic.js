@@ -1,3 +1,4 @@
+const click = require('./events.js')
 
 // Create Players
 const playerOne = 'X'
@@ -18,17 +19,7 @@ const playerTurn = function () {
 // Empty Game Board
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
-// Way of adding to specific index
-const addToBoard = function (index, currentPlayer) {
-// Can not choose occupied spot
-  if (gameBoard[index] === 'X' || gameBoard[index] === 'O') {
-    return 'Sorry, this move has been made!'
-  }
-  gameBoard[index] = currentPlayer
-  console.log(gameBoard)
-
-  playerTurn()
-
+const gameWinner = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     // 0, 1, 2
     return 'Player One Wins'
@@ -82,7 +73,10 @@ const addToBoard = function (index, currentPlayer) {
   }
 }
 
+let userClick = click.clickHandlers
+
 module.exports = {
   gameBoard,
-  addToBoard
+  gameWinner,
+  spotChecker
 }

@@ -3,7 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
-// const addToBoard = require('./game_logic.js')
+const addToBoard = require('./events.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -11,6 +11,10 @@ $(() => {
 
 $(() => {
   authEvents.addHandlers()
+})
+
+$(() => {
+  addToBoard.clickHandlers()
 })
 
 // $(() => {

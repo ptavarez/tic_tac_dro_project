@@ -32,11 +32,27 @@ Now that I'm done with the game's logic (I think), it's time to make some curl r
 
 After:
 
-Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving an error message "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. The legend, William, pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple. 
+Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving an error message "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. The legend, William, pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple.
 
 
-## Game UI
+## Game UI (Feb 9)
 
+Before:
+
+Finally! This is the part I've been looking forward to... Actually making the damn thing. I'm excited to start this part of the project, but I know it's going to be the hardest part thus far.
+
+The goal is to:
+- Design a game board
+- Add a click handler for when a space on the game board is clicked
+- If the user clicks on a valid space then add their X or O
+- Do not allow users to add an X or O to an invalid space
+- Do not allow users to add an X or O to any spaces after the game is over
+- Update the game engine when the game board is updated
+- Add messaging for the user when the turn changes
+- Add messaging for the user when the user clicks on an invalid space
+- Add messaging for the user when the game is over (win or draw)
+
+Easier typed than done though ^.^
 
 ## Game API
 
