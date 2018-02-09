@@ -26,6 +26,7 @@ const signIn = function (data) {
 }
 // TODO fix line 30
 const changePassword = function (data) {
+  console.log(store.user.id + 'eithin api')
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',

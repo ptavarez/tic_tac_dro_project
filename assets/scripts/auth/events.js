@@ -1,5 +1,6 @@
 const api = require('./api')
 const getFormFields = require('../../../lib/get-form-fields')
+const store = require('../store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -29,6 +30,7 @@ const onSignIn = function (event) {
       $('#signIn-message').text('Signed In Successfully')
       $('#signIn-message').css('background-color', 'green')
       console.log(data)
+      store.user = data.user
     })
     .catch(function (error) {
       $('#signIn-message').text('Sign In Error')
@@ -38,9 +40,12 @@ const onSignIn = function (event) {
 }
 
 const onChangePassword = function (event) {
+  console.log('in on change password')
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log(data)
+  console.log('just befre store.user')
+  console.log(store.user.id + ' within event')
   api.changePassword(data)
 }
 
