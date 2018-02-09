@@ -37,9 +37,17 @@ const onSignIn = function (event) {
     })
 }
 
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.changePassword(data)
+}
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp)
   $('.sign-in-form').on('submit', onSignIn)
+  $('.change-password-form').on('submit', onChangePassword)
 }
 
 module.exports = {

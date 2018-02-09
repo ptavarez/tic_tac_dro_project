@@ -1,5 +1,5 @@
 # sh scripts/json/sign-in.sh
-# EMAIL=test@yahooo.com PASSWORD=test sh scripts/json/sign-in.sh
+# EMAIL=coolio@cool.com PASSWORD=cool sh scripts/json/sign-in.sh
 
 curl "http://tic-tac-toe.wdibos.com/sign-in" \
   --include \
