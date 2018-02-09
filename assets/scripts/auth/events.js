@@ -49,10 +49,20 @@ const onChangePassword = function (event) {
   api.changePassword(data)
 }
 
+const onSignOut = function (event) {
+  event.preventDefault()
+  api.signOut()
+    .then(function () {
+      $('#signOut-message').text('Signed Out Successfully')
+      $('#sign-out').css('background-color', 'green')
+    })
+}
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp)
   $('.sign-in-form').on('submit', onSignIn)
   $('.change-password-form').on('submit', onChangePassword)
+  $('#sign-out').on('submit', onSignOut)
 }
 
 module.exports = {
