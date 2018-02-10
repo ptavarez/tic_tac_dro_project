@@ -14,9 +14,10 @@
     <body class="container-fluid">
     <header>
       <h1>Tic-Tac-Dro</h1>
-
+    </header>
       <br>
-      <!-- Sign In Modal Button -->
+    <div>
+      <!-- Sign Up Modal Button -->
       <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
         Sign Up
       </button>
@@ -99,19 +100,12 @@
           </div>
         </div>
       </div>
-      <!-- Sign Out Button -->
-      <form id="sign-out" class="border">
-        <p id="signOut-message"></p>
-        <fieldset>
-          <input type="submit" value="Sign Out" class="btn btn-primary btn-lg">
-        </fieldset>
-      </form>
+    </div>
       <br>
-    </header>
       <!-- Game Board -->
-      <table>
+      <table class="game_board">
         <tr>
-            <td id="top-left" data-cell-index='0'></td>
+            <td id="top-left"></td>
             <td id="top"></td>
             <td id="top-right"></td>
         </tr>
@@ -126,5 +120,12 @@
             <td id="bottom-right"></td>
         </tr>
      </table>
+     <!-- Sign Out Button -->
+     <form id="sign-out" class="border">
+       <p id="signOut-message"></p>
+       <fieldset>
+         <input type="submit" value="Sign Out" class="btn btn-primary btn-lg">
+       </fieldset>
+     </form>
     </body>
 </html>
