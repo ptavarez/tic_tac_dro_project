@@ -20,8 +20,8 @@ const signInSuccess = function (data) {
   $('#signIn-message').css('background-color', 'green')
   console.log(data)
   store.user = data.user
-  $('div').toggle(500)
-  $('table').toggle(1000)
+  // $('div').toggle(500)
+  // $('table').toggle(1000)
 }
 
 const signInFailure = function (error) {
@@ -45,8 +45,8 @@ const signOutSuccess = function (data) {
   $('#signOut-message').text('Signed Out Successfully')
   $('#signOut-message').css('background-color', 'green')
   $('#signOut-message').toggle()
-  $('div').toggle()
-  $('table').toggle()
+  // $('div').toggle()
+  // $('table').toggle()
 }
 
 const signOutFailure = function (error) {

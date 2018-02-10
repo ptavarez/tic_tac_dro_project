@@ -1,20 +1,19 @@
-const click = require('./events.js')
 
-// Create Players
-const playerOne = 'X'
-const playerTwo = 'O'
-
-// First player is always playerOne
-let currentPlayer = playerOne
+// // Create Players
+// const playerOne = 'X'
+// const playerTwo = 'O'
+//
+// // First player is always playerOne
+// let currentPlayer = playerOne
 
 // Way of switching between playerOne and playerTwo
-const playerTurn = function () {
-  if (currentPlayer === playerOne) {
-    currentPlayer = playerTwo
-  } else {
-    currentPlayer = playerOne
-  }
-}
+// const playerTurn = function () {
+//   if (currentPlayer === playerOne) {
+//     currentPlayer = playerTwo
+//   } else {
+//     currentPlayer = playerOne
+//   }
+// }
 
 // Empty Game Board
 const gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -22,6 +21,7 @@ const gameBoard = ['', '', '', '', '', '', '', '', '']
 const gameWinner = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     // 0, 1, 2
+    console.log('win')
     return 'Player One Wins'
   } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
     // 0, 1, 2
@@ -73,10 +73,7 @@ const gameWinner = function () {
   }
 }
 
-let userClick = click.clickHandlers
-
 module.exports = {
   gameBoard,
-  gameWinner,
-  spotChecker
+  gameWinner
 }
