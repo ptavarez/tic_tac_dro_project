@@ -56,9 +56,13 @@ Easier typed than done though ^.^
 
 After:
 
-That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling. 
+That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling.
 
-## Game API
+## Game API (Feb 11)
+
+Before:
+
+Time to start probabibly the hardest part of the project... The game's API. I actually do not even know where to start. I know we've done something similar when we did the query-ajax-post training... But I feel like this is on a whole other level. I hope I'm just over thinking it, but here goes nothing :D... -.-
 
 
 ## Final Touches
