@@ -35,7 +35,7 @@ After:
 Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving an error message "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. The legend, William, pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple.
 
 
-## Game UI (Feb 9)
+## Game UI (Feb 9-11)
 
 Before:
 
@@ -53,6 +53,10 @@ The goal is to:
 - Add messaging for the user when the game is over (win or draw)
 
 Easier typed than done though ^.^
+
+After:
+
+That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling. 
 
 ## Game API
 
