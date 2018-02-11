@@ -5,6 +5,7 @@ body {
   background-color: #000;
   margin: auto;
   max-width: 500px;
+  text-align: center;
 }
 
 table {
@@ -32,9 +33,9 @@ tr:nth-of-type(3) td {
 
 td {
   border: 10px ridge #fff;
-  height: 150px;
-  width: 150px;
-  font-size: 20px;
+  height: 125px;
+  width: 125px;
+  font-size: 75px;
   color: red;
   text-align: center;
   font-family: Chalkduster, fantasy;

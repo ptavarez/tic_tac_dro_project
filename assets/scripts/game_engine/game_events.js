@@ -19,6 +19,17 @@ const playerTurn = function () {
   }
 }
 
+// Current Player Indicator
+const turnIndicator = function () {
+  if (currentPlayer !== playerOne) {
+    $('#playerTwo').empty()
+    $('#playerOne').text('First Player\'s turn')
+  } else if (currentPlayer === playerOne) {
+    $('#playerOne').empty()
+    $('#playerTwo').text('Second Player\'s Turn')
+  }
+}
+
 // Tie Game Checker
 const tieGame = function (index) {
   if (gameBoard[0] !== '' &&
@@ -260,6 +271,7 @@ const clickHandlers = () => {
     topLeft()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -267,6 +279,7 @@ const clickHandlers = () => {
     top()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -274,6 +287,7 @@ const clickHandlers = () => {
     topRight()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -281,6 +295,7 @@ const clickHandlers = () => {
     middleLeft()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -288,6 +303,7 @@ const clickHandlers = () => {
     middle()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -295,6 +311,7 @@ const clickHandlers = () => {
     middleRight()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -302,6 +319,7 @@ const clickHandlers = () => {
     bottomLeft()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -309,6 +327,7 @@ const clickHandlers = () => {
     bottom()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -316,6 +335,7 @@ const clickHandlers = () => {
     bottomRight()
     gameWinMessage()
     tieGameMessage()
+    turnIndicator()
     playerTurn()
     console.log(gameBoard)
   })
@@ -323,5 +343,6 @@ const clickHandlers = () => {
 
 module.exports = {
   clickHandlers,
-  gameWinner
+  gameWinner,
+  turnIndicator
 }
