@@ -8,7 +8,7 @@ curl --include --request GET "http://tic-tac-toe.wdibos.com/games/${ID}" \
     {
       "id": "'"${1}"'",
       "cells": "'"${ARRAY}"'",
-      "over": "'"${TRUE}"'",
+      "over": "'"true"'",
       "player_x": {
         "id": "'"${1}"'",
         "email": "'"${EMAIL}"'"

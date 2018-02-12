@@ -1,4 +1,4 @@
-# TOKEN="" sh assets/scripts/game_api/json_sh/create_game.sh
+# TOKEN="" ID= INDEX= VALUE= OVER= sh assets/scripts/game_api/json_sh/update_game.sh
 
 curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/${ID}" \
   --header "Content-Type: application/json" \
@@ -6,10 +6,10 @@ curl --include --request PATCH "http://tic-tac-toe.wdibos.com/games/${ID}" \
   --data '{
     "game": {
       "cell": {
-        "index": "'"${0}"'",
-        "value": "'"${X}"'"
+        "index": "'"${INDEX}"'",
+        "value": "'"${VALUE}"'"
       },
-      "over": "'"${FALSE}"'"
+      "over": "'"${OVER}"'"
     }
   }'
 
