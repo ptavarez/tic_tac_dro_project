@@ -108,6 +108,13 @@
         <input type="submit" value="Sign Out" class="btn btn-primary btn-lg">
       </fieldset>
     </form>
+    <!-- Create Game Button -->
+    <form id="create-game" class="border">
+      <p id="create-game-message"></p>
+      <fieldset>
+        <input type="submit" value="Create Game" class="btn btn-primary btn-lg">
+      </fieldset>
+    </form>
       <br>
       <br>
       <!-- Game Board -->
@@ -120,19 +127,19 @@
       <br>
       <table class="game_board">
         <tr>
-            <td id="top-left"></td>
-            <td id="top"></td>
-            <td id="top-right"></td>
+            <td data-cell-index='0' id="top-left"></td>
+            <td data-cell-index='1' id="top"></td>
+            <td data-cell-index='2' id="top-right"></td>
         </tr>
         <tr>
-            <td id="middle-left"></td>
-            <td id="middle"></td>
-            <td id="middle-right"></td>
+            <td data-cell-index='3' id="middle-left"></td>
+            <td data-cell-index='4' id="middle"></td>
+            <td data-cell-index='5' id="middle-right"></td>
         </tr>
         <tr>
-            <td id="bottom-left"></td>
-            <td id="bottom"></td>
-            <td id="bottom-right"></td>
+            <td data-cell-index='6' id="bottom-left"></td>
+            <td data-cell-index='7' id="bottom"></td>
+            <td data-cell-index='8' id="bottom-right"></td>
         </tr>
      </table>
     </body>
