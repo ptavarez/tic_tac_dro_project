@@ -16,7 +16,6 @@ const createGame = function (data) {
 }
 
 const updateGameMove = function (index, currentPlayer) {
-  console.log(index, currentPlayer)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -36,7 +35,6 @@ const updateGameMove = function (index, currentPlayer) {
 }
 
 const updateGameStatus = function () {
-  console.log(store.game)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -52,8 +50,21 @@ const updateGameStatus = function () {
   })
 }
 
+const getGames = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/games?over=true',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   createGame,
   updateGameMove,
-  updateGameStatus
+  updateGameStatus,
+  getGames
 }

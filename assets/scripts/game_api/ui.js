@@ -16,7 +16,13 @@ const updateGameSuccess = function (data) {
   store.game.over = false
 }
 
+const getGamesSuccess = function (data) {
+  console.log(data.games.length)
+  $('#please').text('You\'ve completed ' + data.games.length + ' games!')
+}
+
 module.exports = {
   createGameSuccess,
-  updateGameSuccess
+  updateGameSuccess,
+  getGamesSuccess
 }

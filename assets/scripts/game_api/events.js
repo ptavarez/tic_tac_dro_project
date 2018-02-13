@@ -31,6 +31,12 @@ const onUpdateGame = function (event) {
   gameApi.updateGameMove($(this).data('cellIndex'), currentPlayer)
 }
 
+const onGetGames = function (event) {
+  event.preventDefault()
+  gameApi.getGames()
+    .then(gameUi.getGamesSuccess)
+}
+
 const gameHandlers = () => {
   $('#create-game').on('submit', onCreateGame)
   $('#top-left').one('click', onUpdateGame)
@@ -42,6 +48,7 @@ const gameHandlers = () => {
   $('#bottom-left').one('click', onUpdateGame)
   $('#bottom').one('click', onUpdateGame)
   $('#bottom-right').one('click', onUpdateGame)
+  $('#get-game').on('submit', onGetGames)
 }
 
 module.exports = {
