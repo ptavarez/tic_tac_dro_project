@@ -58,11 +58,23 @@ After:
 
 That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling.
 
-## Game API (Feb 11)
+## Game API (Feb 11-13)
 
 Before:
 
 Time to start probabibly the hardest part of the project... The game's API. I actually do not even know where to start. I know we've done something similar when we did the query-ajax-post training... But I feel like this is on a whole other level. I hope I'm just over thinking it, but here goes nothing :D... -.-
 
+After:
+
+THAT SHIT WAS A FORCE! Seriously though, this was by far the hardest part of the project. At first I thought it was going to be a breeze after successfully being able to create a game, but once I got to updating a game... RIP.
+
+I legit spent over 5 hours looking at my screen not knowing what to do. After a good night's rest, I ended tackling updating the game fairly fast lol. Chris is 100% right when he says to walk away from the screen and take a break if you find yourself hitting a wall.
+
+After that, retrieving game statistics wasn't too bad. By far a more productive day. Now off to add some final touches!
+
 
 ## Final Touches
+
+Before:
+
+Time to make this bitch look nice. I somewhat started styling already, but now that I know everything works, I could really add some flavor to my page. Making it a SPA page may be a little difficult, but I feel like this is the easier part of the project (for me anyways).
