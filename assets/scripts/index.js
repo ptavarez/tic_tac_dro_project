@@ -4,7 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
 const addToBoard = require('./game_engine/game_events.js')
-const gameEvents = require('./game_api/api.js')
+const gameEvents = require('./game_api/events.js')
 
 $(() => {
   setAPIOrigin(location, config)

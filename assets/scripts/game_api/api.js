@@ -2,7 +2,6 @@
 
 const config = require('../config')
 const store = require('../store')
-const getFormFields = require('../../../lib/get-form-fields')
 
 const createGame = function (data) {
   return $.ajax({
@@ -16,24 +15,45 @@ const createGame = function (data) {
   })
 }
 
-const createGameSuccess = function (data) {
-  $('#please').text('Game Created Successfully')
-  console.log(data)
-  store.game = data.game
+const updateGameMove = function (index, currentPlayer) {
+  console.log(index, currentPlayer)
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      game: {
+        cell: {
+          index: index,
+          value: currentPlayer
+        }
+      }
+    }
+  })
 }
 
-const onCreateGame = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  createGame(data)
-    .then(createGameSuccess)
-}
-
-const gameHandlers = () => {
-  $('#create-game').on('submit', onCreateGame)
+const updateGameStatus = function () {
+  console.log(store.game)
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      game: {
+        over: true
+      }
+    }
+  })
 }
 
 module.exports = {
   createGame,
-  gameHandlers
+  updateGameMove,
+  updateGameStatus
 }

@@ -1,5 +1,7 @@
 'use strict'
 
+const gameStatus = require('../game_api/api.js')
+
 // Create Game Board
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -42,6 +44,7 @@ const tieGame = function (index) {
    gameBoard[7] !== '' &&
    gameBoard[8] !== '') {
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Tie Game'
   }
@@ -53,97 +56,112 @@ const gameWinner = function () {
     // 0, 1, 2
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
-    console.log($('td'))
     return 'Player One Wins'
   } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
     // 0, 1, 2
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
     // 3, 4, 5
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
     // 3, 4, 5
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
     // 6, 7, 8
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
     // 6, 7, 8
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
     // 0, 3, 6
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
     // 0, 3, 6
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
     // 1, 4, 7
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
     // 1, 4, 7
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
     // 2, 5, 8
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
     // 2, 5, 8
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
     // 0, 4, 8
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
     // 0, 4, 8
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
     // 2, 4, 6
     console.log('Player One Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player One Wins'
   } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
     // 2, 4, 6
     console.log('Player Two Wins')
     gameBoard = ['', '', '', '', '', '', '', '', '']
+    gameStatus.updateGameStatus()
     $('td').empty()
     return 'Player Two Wins'
   } else {
@@ -166,7 +184,7 @@ const moveMade = function () {
   $('#please').text('Move Made')
 }
 
-// Top left box
+// Top left box & stop duplicate click
 const topLeft = function () {
   if ($('#top-left').text() === '') {
     $('#top-left').text(currentPlayer)
@@ -177,7 +195,7 @@ const topLeft = function () {
   }
 }
 
-// Top box
+// Top box & stop duplicate click
 const top = function () {
   if ($('#top').text() === '') {
     $('#top').text(currentPlayer)
@@ -188,7 +206,7 @@ const top = function () {
   }
 }
 
-// Top right box
+// Top right box & stop duplicate click
 const topRight = function () {
   if ($('#top-right').text() === '') {
     $('#top-right').text(currentPlayer)
@@ -199,7 +217,7 @@ const topRight = function () {
   }
 }
 
-// Middle left box
+// Middle left box & stop duplicate click
 const middleLeft = function () {
   if ($('#middle-left').text() === '') {
     $('#middle-left').text(currentPlayer)
@@ -210,7 +228,7 @@ const middleLeft = function () {
   }
 }
 
-// Middle box
+// Middle box & stop duplicate click
 const middle = function () {
   if ($('#middle').text() === '') {
     $('#middle').text(currentPlayer)
@@ -221,7 +239,7 @@ const middle = function () {
   }
 }
 
-// Middle right box
+// Middle right box & stop duplicate click
 const middleRight = function () {
   if ($('#middle-right').text() === '') {
     $('#middle-right').text(currentPlayer)
@@ -232,7 +250,7 @@ const middleRight = function () {
   }
 }
 
-// Bottom left box
+// Bottom left box & stop duplicate click
 const bottomLeft = function () {
   if ($('#bottom-left').text() === '') {
     $('#bottom-left').text(currentPlayer)
@@ -243,7 +261,7 @@ const bottomLeft = function () {
   }
 }
 
-// Bottom box
+// Bottom box & stop duplicate click
 const bottom = function () {
   if ($('#bottom').text() === '') {
     $('#bottom').text(currentPlayer)
@@ -254,7 +272,7 @@ const bottom = function () {
   }
 }
 
-// Bottom right box
+// Bottom right box & stop duplicate click
 const bottomRight = function () {
   if ($('#bottom-right').text() === '') {
     $('#bottom-right').text(currentPlayer)
@@ -273,7 +291,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#top').on('click', function () {
     top()
@@ -281,7 +298,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#top-right').on('click', function () {
     topRight()
@@ -289,7 +305,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#middle-left').on('click', function () {
     middleLeft()
@@ -297,7 +312,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#middle').on('click', function () {
     middle()
@@ -305,7 +319,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#middle-right').on('click', function () {
     middleRight()
@@ -313,7 +326,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#bottom-left').on('click', function () {
     bottomLeft()
@@ -321,7 +333,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#bottom').on('click', function () {
     bottom()
@@ -329,7 +340,6 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
   $('#bottom-right').on('click', function () {
     bottomRight()
@@ -337,12 +347,12 @@ const clickHandlers = () => {
     tieGameMessage()
     turnIndicator()
     playerTurn()
-    console.log(gameBoard)
   })
 }
 
 module.exports = {
   clickHandlers,
   gameWinner,
-  turnIndicator
+  turnIndicator,
+  currentPlayer
 }
