@@ -4,6 +4,21 @@
 
 Hey team! I'm going to create some form of blog as I code my first project. The goal is to create a functional tic-tac-toe game. I don't expect it to be easy, so be prepared for a couple of angry posts!
 
+I plan to build a game that allows users to:
+  -- Be able to sign up and have a unique screen name.
+  -- Be able to sign in and/or change their password.
+  -- Be able to signout.
+  -- Be redirected to game board upon successful login.
+  -- Be able to create a new game.
+  -- Playable on any device.
+
+Below are links to my wire frames:
+
+  https://i.imgur.com/5g8m1eN.jpg
+  https://i.imgur.com/sS75hPr.jpg
+
+I hope to comeup with something similar.
+
 ## Setting Up (Feb 6)
 
 Before:
@@ -73,8 +88,12 @@ I legit spent over 5 hours looking at my screen not knowing what to do. After a 
 After that, retrieving game statistics wasn't too bad. By far a more productive day. Now off to add some final touches!
 
 
-## Final Touches
+## Final Touches (2-13)
 
 Before:
 
 Time to make this bitch look nice. I somewhat started styling already, but now that I know everything works, I could really add some flavor to my page. Making it a SPA page may be a little difficult, but I feel like this is the easier part of the project (for me anyways).
+
+After:
+
+Project is done (unless I have to resubmit)! Styling was simple.. I didn't have much time so I had to rush it, but it still came out decent I guess. I had a little trouble making the page responsive, but it still works. The hardest part of styling was making the site into a SPA. Got it done, but I feel like it's still a little buggy. Fow now, I'm over this stupid game lol... But I plan on coming back to this project and changing up the code to make it more presentable.

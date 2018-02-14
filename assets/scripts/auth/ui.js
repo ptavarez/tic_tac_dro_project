@@ -26,6 +26,7 @@ const signInSuccess = function (data) {
   $('table').hide()
   $('#messages').hide()
   $('#playerOne').hide()
+  $('#signOut-message').empty()
 }
 
 const signInFailure = function (error) {
@@ -56,6 +57,7 @@ const signOutSuccess = function (data) {
   $('table').hide()
   // $('p').hide()
   $('#get-game').hide()
+  $('#please').empty()
 }
 
 const signOutFailure = function (error) {
