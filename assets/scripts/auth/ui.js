@@ -8,6 +8,7 @@ const signUpSuccess = function (data) {
   $('#signUp-message').css('color', 'black')
   $('#sign-up-modal').modal('hide')
   $('#signOut-message').empty()
+  $('#signUp-message').empty()
   $('.sign-up-form').get(0).reset()
 }
 
