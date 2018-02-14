@@ -88,7 +88,7 @@ I legit spent over 5 hours looking at my screen not knowing what to do. After a 
 After that, retrieving game statistics wasn't too bad. By far a more productive day. Now off to add some final touches!
 
 
-## Final Touches (2-13)
+## Final Touches (Feb 13)
 
 Before:
 
