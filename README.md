@@ -5,12 +5,12 @@
 Hey team! I'm going to create some form of blog as I code my first project. The goal is to create a functional tic-tac-toe game. I don't expect it to be easy, so be prepared for a couple of angry posts!
 
 I plan to build a game that allows users to:
-  -- Be able to sign up and have a unique screen name.
-  -- Be able to sign in and/or change their password.
-  -- Be able to signout.
-  -- Be redirected to game board upon successful login.
-  -- Be able to create a new game.
-  -- Playable on any device.
+  - Be able to sign up and have a unique screen name.
+  - Be able to sign in and/or change their password.
+  - Be able to signout.
+  - Be redirected to game board upon successful login.
+  - Be able to create a new game.
+  - Playable on any device.
 
 Below are links to my wire frames:
 
