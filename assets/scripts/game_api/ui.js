@@ -13,7 +13,7 @@ const createGameSuccess = function (data) {
   $('.game-nav').show()
   $('p').show()
   $('.sign-in-success').hide()
-  $('#signInSuccess-message').hide()
+  $('#signInSuccess-message').empty()
 }
 
 const updateGameSuccess = function (data) {

@@ -6,6 +6,7 @@ const signUpSuccess = function (data) {
   $('#signUp-message').text('Signed Up Successfully')
   $('#signUp-message').css('background-color', 'green')
   $('#signUp-message').css('color', 'black')
+  $('#signOut-message').empty()
 }
 
 const signUpFailure = function (error) {
@@ -27,6 +28,9 @@ const signInSuccess = function (data) {
   $('#messages').hide()
   $('#playerOne').hide()
   $('#signOut-message').empty()
+  $('#signIn-message').empty()
+  $('#changePassword-message').empty()
+  $('#signUp-message').empty()
 }
 
 const signInFailure = function (error) {
@@ -39,8 +43,9 @@ const signInFailure = function (error) {
 
 const changePasswordSuccess = function (data) {
   $('#changePassword-message').text('Changed Password Successfully')
-  $('#changePassword-message').css('background-color', 'green')
-  $('#signInSuccess-message').hide()
+  $('#changePassword-message').css('color', 'green')
+  $('#signInSuccess-message').empty()
+  $('#signOut-message').empty()
 }
 
 const changePasswordFailure = function (error) {
@@ -58,6 +63,7 @@ const signOutSuccess = function (data) {
   // $('p').hide()
   $('#get-game').hide()
   $('#please').empty()
+  $('#signInSuccess-message').empty()
 }
 
 const signOutFailure = function (error) {
