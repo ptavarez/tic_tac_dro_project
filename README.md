@@ -14,8 +14,8 @@ I plan to build a game that allows users to:
 
 Below are links to my wire frames:
 
-  https://i.imgur.com/5g8m1eN.jpg
-  https://i.imgur.com/sS75hPr.jpg
+  - https://i.imgur.com/5g8m1eN.jpg
+  - https://i.imgur.com/sS75hPr.jpg
 
 I hope to comeup with something similar.
 
