@@ -57,6 +57,7 @@ td {
   font-family: $swaggy-font;
   font-size: 75px;
   text-align: center;
-  @include breakpoint('tiny')
-  font-size: 40px;
+  @include breakpoint('tiny') {
+    font-size: 40px;
+  }
 }

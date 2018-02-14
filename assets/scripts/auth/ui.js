@@ -8,6 +8,7 @@ const signUpSuccess = function (data) {
   $('#signUp-message').css('color', 'black')
   $('#sign-up-modal').modal('hide')
   $('#signOut-message').empty()
+  $('.sign-up-form').get(0).reset()
 }
 
 const signUpFailure = function (error) {
@@ -33,6 +34,7 @@ const signInSuccess = function (data) {
   $('#changePassword-message').empty()
   $('#signUp-message').empty()
   $('#signUpSuccess-message').empty()
+  $('.sign-in-form').get(0).reset()
 }
 
 const signInFailure = function (error) {
@@ -49,6 +51,7 @@ const changePasswordSuccess = function (data) {
   $('#signInSuccess-message').empty()
   $('#signOut-message').empty()
   $('#change-password-modal').modal('hide')
+  $('.change-password-form').get(0).reset()
 }
 
 const changePasswordFailure = function (error) {

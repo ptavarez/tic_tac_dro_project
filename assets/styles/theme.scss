@@ -2,14 +2,14 @@
   background-color: $navy;
   font-family: $swaggy-font;
   @include breakpoint('tiny') {
-    margin: 10px;
+    // margin: 10px;
   }
 }
 
 .border {
   display: inline-block;
   @include breakpoint('tiny') {
-    display: inline-block;
+    // display: inline-block;
     width: 10px;
   }
 }
@@ -46,11 +46,12 @@
   height: 100px;
   margin: 20px;
   width: 400px;
-  @include breakpoint('tiny')
-    margin: 10px auto;
+  @include breakpoint('tiny') {
+    margin-right: 200px;
     height: 50px;
-    width: 200;
+    width: 200px;
   }
+}
 
 #playerOne {
   text-align: left;
@@ -71,7 +72,7 @@ body {
   text-align: center;
   @include breakpoint('tiny') {
     font-size: 20px;
-    margin: auto;
+    // margin: auto;
   }
 }
 
