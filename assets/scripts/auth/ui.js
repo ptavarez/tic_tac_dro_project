@@ -3,9 +3,10 @@ const store = require('../store')
 // TODO find a way to have to modal disappear after success
 
 const signUpSuccess = function (data) {
-  $('#signUp-message').text('Signed Up Successfully')
+  $('#signUpSuccess-message').text('Signed Up Successfully')
   $('#signUp-message').css('background-color', 'green')
   $('#signUp-message').css('color', 'black')
+  $('#sign-up-modal').modal('hide')
   $('#signOut-message').empty()
 }
 
@@ -31,6 +32,7 @@ const signInSuccess = function (data) {
   $('#signIn-message').empty()
   $('#changePassword-message').empty()
   $('#signUp-message').empty()
+  $('#signUpSuccess-message').empty()
 }
 
 const signInFailure = function (error) {
@@ -42,10 +44,11 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#changePassword-message').text('Changed Password Successfully')
+  $('#changePasswordSuccess-message').text('Changed Password Successfully')
   $('#changePassword-message').css('color', 'green')
   $('#signInSuccess-message').empty()
   $('#signOut-message').empty()
+  $('#change-password-modal').modal('hide')
 }
 
 const changePasswordFailure = function (error) {
@@ -64,6 +67,7 @@ const signOutSuccess = function (data) {
   $('#get-game').hide()
   $('#please').empty()
   $('#signInSuccess-message').empty()
+  $('#changePasswordSuccess-message').empty()
 }
 
 const signOutFailure = function (error) {

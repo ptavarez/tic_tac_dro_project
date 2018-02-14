@@ -14,6 +14,7 @@ const createGameSuccess = function (data) {
   $('p').show()
   $('.sign-in-success').hide()
   $('#signInSuccess-message').empty()
+  $('#changePasswordSuccess-message').empty()
 }
 
 const updateGameSuccess = function (data) {
@@ -24,6 +25,7 @@ const updateGameSuccess = function (data) {
 
 const getGamesSuccess = function (data) {
   $('#please').text('You\'ve completed ' + data.games.length + ' games!')
+  $('#changePasswordSuccess-message').empty()
 }
 
 module.exports = {
