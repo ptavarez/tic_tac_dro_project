@@ -1,57 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
-body {
-  background-color: #000;
-  margin: auto;
-  max-width: 500px;
-  text-align: center;
-}
-
-table {
-  border-collapse: collapse;
-  margin: auto;
-  }
-
-td:first-of-type {
-  border-left-color: transparent;
-  border-top-color: transparent;
-}
-
-td:nth-of-type(2) {
-  border-top-color: transparent;
-}
-
-td:nth-of-type(3) {
-  border-right-color: transparent;
-  border-top-color: transparent;
-}
-
-tr:nth-of-type(3) td {
-  border-bottom-color: transparent;
-}
-
-td {
-  border: 10px ridge #fff;
-  height: 125px;
-  width: 125px;
-  font-size: 75px;
-  color: red;
-  text-align: center;
-  font-family: Chalkduster, fantasy;
-}
-
-header {
-  text-align: center;
-  color: white;
-  font-family: Chalkduster, fantasy;
-  background-color: red;
-}
-
-button {
-  display: block;
-}
-
-div {
-  margin: auto;
-}
+@import 'breakpoints';
+@import 'colors';
+@import 'typography';
+@import 'theme';

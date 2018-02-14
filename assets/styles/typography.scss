@@ -1,0 +1,61 @@
+$swaggy-font: Chalkduster, fantasy;
+
+.btn {
+  color: $red;
+  font-family: $swaggy-font;
+  @include breakpoint('tiny') {
+    margin-right: 100px;
+    max-width: 200px;
+  }
+}
+
+.form-control {
+  color: $red;
+  font-family: $swaggy-font;
+  margin: 10px;
+  padding: 10px;
+}
+
+.main-page {
+  font-family: $swaggy-font;
+  font-size: 40px;
+}
+
+.modal-header {
+  color: $red;
+  font-family: $swaggy-font;
+}
+
+.sign-in-success {
+  font-family: $swaggy-font;
+}
+
+p {
+  font-family: $swaggy-font;
+  @include breakpoint('tiny') {
+    font-size: 10px;
+    max-width: 100%;
+  }
+}
+
+h1 {
+  font-size: 80px;
+  @include breakpoint('tiny') {
+    font-size: 35px;
+  }
+}
+
+header {
+  color: $red;
+  font-family: $swaggy-font;
+  text-align: center;
+}
+
+td {
+  color: $red;
+  font-family: $swaggy-font;
+  font-size: 75px;
+  text-align: center;
+  @include breakpoint('tiny')
+  font-size: 40px;
+}

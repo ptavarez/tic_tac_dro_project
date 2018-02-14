@@ -1,0 +1,123 @@
+.btn {
+  background-color: $navy;
+  font-family: $swaggy-font;
+  @include breakpoint('tiny') {
+    margin: 10px;
+  }
+}
+
+.border {
+  display: inline-block;
+  @include breakpoint('tiny') {
+    display: inline-block;
+    width: 10px;
+  }
+}
+
+
+// .drop {
+//   float: left;
+// }
+
+.modal {
+  background-color: $navy;
+}
+
+.modal-body,
+.modal-header {
+  background-color: $aqua;
+}
+
+.form-control {
+  background: $navy;
+}
+
+.main {
+  display: none;
+}
+
+.main-page {
+  height: 150px;
+  margin: 60px;
+  width: 500px;
+}
+
+.sign-in-success {
+  height: 100px;
+  margin: 20px;
+  width: 400px;
+  @include breakpoint('tiny')
+    margin: 10px auto;
+    height: 50px;
+    width: 200;
+  }
+
+#playerOne {
+  text-align: left;
+}
+
+#playerTwo {
+  text-align: right;
+}
+
+p {
+  margin: 10px;
+}
+
+body {
+  background-color: $aqua;
+  color: $red;
+  margin: auto;
+  text-align: center;
+  @include breakpoint('tiny') {
+    font-size: 20px;
+    margin: auto;
+  }
+}
+
+
+header {
+  background: $navy;
+  height: 100px;
+  margin: 5px;
+  @include breakpoint('tiny') {
+    max-width: 100%;
+    padding: 5px;
+  }
+}
+
+
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+
+td {
+  border: 10px ridge $navy;
+  height: 125px;
+  width: 125px;
+  @include breakpoint('tiny') {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+td:first-of-type {
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+td:nth-of-type(2) {
+  border-top-color: transparent;
+}
+
+td:nth-of-type(3) {
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+tr:nth-of-type(3) td {
+  border-bottom-color: transparent;
+}

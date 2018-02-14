@@ -3,6 +3,7 @@
 const gameApi = require('./api.js')
 const gameUi = require('./ui.js')
 const store = ('./../store.js')
+// const gameEngine = ('../game_engine/game_events.js')
 
 // Create Players
 const playerOne = 'X'
@@ -22,6 +23,7 @@ const playerTurn = function () {
 
 const onCreateGame = function (event) {
   event.preventDefault()
+  $('td').empty()
   gameApi.createGame(store)
     .then(gameUi.createGameSuccess)
 }
