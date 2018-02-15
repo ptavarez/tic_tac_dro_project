@@ -30,6 +30,8 @@ I hope to comeup with something similar.
 | Feb 14  |    [Resubmittal](#resubmittal-feb-14) |
 | Feb 15 | [Technologies Used](#technologies-used-feb-15) |
 
+If you would like to see the current version of the project, heres the link:  https://ptavarez16.github.io/tic_tac_dro_project/
+
 ## Setting Up (Feb 6)
 
 **Before:**
