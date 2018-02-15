@@ -21,14 +21,14 @@ I hope to comeup with something similar.
 
 |  Timeline  |             Step              |
 |:--------|:------------------------------:|
-| Feb 6 | [Setting Up](#setting-up) |
-| Feb 7 - 8 | [Game Engine](#game-engine) |
-| Feb 8-9 | [Authentication](#authentication) |
-| Feb 9-11 |    [Game UI](#game-ui) |
-| Feb 11-13 | [Game API](#game-api) |
-| Feb 13 | [Final Touches](#final-touches) |
-| Feb 14  |    [Resubmittal](#resubmittal) |
-| Feb 15 | [Technologies Used](#technologies-used) |
+| Feb 6 | [Setting Up](#setting-up-feb-6) |
+| Feb 7 - 8 | [Game Engine](#game-engine-feb-7-8) |
+| Feb 8-9 | [Authentication](#authentication-feb-8-9) |
+| Feb 9-11 |    [Game UI](#game-ui-feb-9-11) |
+| Feb 11-13 | [Game API](#game-api-feb-11-13) |
+| Feb 13 | [Final Touches](#final-touches-feb-13) |
+| Feb 14  |    [Resubmittal](#resubmittal-feb-14) |
+| Feb 15 | [Technologies Used](#technologies-used-feb-15) |
 
 ## Setting Up (Feb 6)
 
