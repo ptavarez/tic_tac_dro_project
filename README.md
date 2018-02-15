@@ -19,6 +19,17 @@ Below are links to my wire frames:
 
 I hope to comeup with something similar.
 
+|  Timeline  |             Step              |
+|:--------|:------------------------------:|
+| Feb 6 | [Setting Up](#setting-up)  |
+| Feb 7 - 8 | [Game Engine](#game-engine)        |
+| Feb 8-9 |    [Authentication](#authentication)     |
+| Feb 9-11 |    [Game UI](#game-ui)     |
+| Feb 11-13 |      [Game API](#game-api)       |
+| Feb 13 |             [Final Touches](#final--touches)                |
+| Feb 14  |    [Resubmittal](#Resubmittal)       |
+| Feb 15 |  [Technologies Used](#technologies--used)   |
+
 ## Setting Up (Feb 6)
 
 **Before:**
@@ -29,7 +40,7 @@ Setting up doesn't seem to hard... Just following simple intructions to be hones
 
 As I thought, setting was not bad at all. I feel like the steps could have been slightly more clear, but overall pretty straight forward. I'll be working on the game's engine tomorrow... I'm nervous but excited to start!
 
-## Game Engine (Feb 7 - 8)
+## Game Engine (Feb 7-8)
 
 **Before:**
 
@@ -115,7 +126,9 @@ Auth Specifications
 
 I can't lie, I was really hoping to not have to resubmit, but no worries! It's part of the process. "Stay methodical and focused on what you need to fix. Re-submittals are similar to what we deal with on the job when we submit an application to a client or manager. You’ll learn to love the feedback." - Michael Finneran.
 
-On that note, I'll knock out some of the documentation I missed.
+On that note, let's start debugging!
+
+## Technologies Used (Feb 15)
 
 This project helped me grasp a better understanding of the tools and technologies that were introduced to us.
 
