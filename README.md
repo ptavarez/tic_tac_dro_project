@@ -26,9 +26,9 @@ I hope to comeup with something similar.
 | Feb 8-9 |    [Authentication](#authentication)     |
 | Feb 9-11 |    [Game UI](#game-ui)     |
 | Feb 11-13 |      [Game API](#game-api)       |
-| Feb 13 |             [Final Touches](#final--touches)                |
-| Feb 14  |    [Resubmittal](#Resubmittal)       |
-| Feb 15 |  [Technologies Used](#technologies--used)   |
+| Feb 13 |             [Final Touches](#final-touches)                |
+| Feb 14  |    [Resubmittal](#resubmittal)       |
+| Feb 15 |  [Technologies Used](#technologies-used)   |
 
 ## Setting Up (Feb 6)
 
