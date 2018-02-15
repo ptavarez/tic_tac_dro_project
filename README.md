@@ -43,11 +43,11 @@ Just finished up the game's logic. I feel like I did a bad job making my code DR
 
 **Before:**
 
-Now that I'm done with the game's logic (I think), it's time to make some curl requests and start being buddies wiht the API. Making curl requests is a little fuzzy to me, but I hope I could make this work. After I successfully made curl requests to the API to sign up, sign in, change password, and sign out, I have to make sure I get success or failure messages.
+Now that I'm done with the game's logic (I think), it's time to make some curl requests and start being buddies with the API. Making curl requests is a little fuzzy to me, but I hope I could make this work. After I successfully make curl requests to the API to sign up, sign in, change password, and sign out, I have to make sure I get success or failure messages.
 
 **After:**
 
-Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving an error message "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. The legend, William, pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple.
+Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving the error message: "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. Sir William pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple.
 
 
 ## Game UI (Feb 9-11)
@@ -71,7 +71,7 @@ Easier typed than done though ^.^
 
 **After:**
 
-That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling.
+That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move on to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling.
 
 ## Game API (Feb 11-13)
 
@@ -96,27 +96,28 @@ Time to make this bitch look nice. I somewhat started styling already, but now t
 
 **After:**
 
-Project is done (unless I have to resubmit)! Styling was simple.. I didn't have much time so I had to rush it, but it still came out decent I guess. I had a little trouble making the page responsive, but it still works. The hardest part of styling was making the site into a SPA. Got it done, but I feel like it's still a little buggy. Fow now, I'm over this stupid game lol... But I plan on coming back to this project and changing up the code to make it more presentable.
+Project is done... unless I have to resubmit. Styling was simple.. I didn't have much time so I had to rush it, but it still came out decent I guess. I had a little trouble making the page responsive, but it still works. The hardest part of styling was making the site into a SPA. Got it done, but I feel like it's still a little buggy. Fow now, I'm over this stupid game lol... Eventually I plan on coming back to this project and changing up the code and styling to make it more presentable.
 
 ## Resubmittal (Feb 14)
 
-Overall, I feel like I did a pretty good job on my first project. I tried my best to complete all requirements, but I have a couple of bugs to fix and updates to make on documentation. Here's what I got back from Chris:
+Overall, I feel like I did a pretty good job on my first project. I tried my best to complete all of the requirements, but I have a couple of bugs to fix and updates to make on my documentation. Here's what I got back from Chris:
 
 Documentation
 - Pin your repository on GitHub as a Popular Repository.
 - List technologies used
-- No list of technologies used.
 
 API Specifications
  - Update a game by storing new moves. (UPDATE)
- - Only makes PATCH request once game is entirely over, should update the API after each move
+   - Only makes PATCH request once game is entirely over, should update the API after each move
 
 Auth Specifications
  - All forms must clear after submit success or failure.
 
 I can't lie, I was really hoping to not have to resubmit, but no worries! It's part of the process. "Stay methodical and focused on what you need to fix. Re-submittals are similar to what we deal with on the job when we submit an application to a client or manager. You’ll learn to love the feedback." - Michael Finneran.
 
-On that note, I'll knock out some of the documentation I missed. This project helped me grasp a better understanding of the tools and technologies that were introduced to us.
+On that note, I'll knock out some of the documentation I missed.
+
+This project helped me grasp a better understanding of the tools and technologies that were introduced to us.
 
 **My project consists of the following technologies:**
 - HTML
