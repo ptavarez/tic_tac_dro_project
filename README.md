@@ -21,38 +21,38 @@ I hope to comeup with something similar.
 
 ## Setting Up (Feb 6)
 
-Before:
+**Before:**
 
 Setting up doesn't seem to hard... Just following simple intructions to be honest. I just finished downloading this template (thanks GA!). Next I have to set up a github repo, and then I have to deploy. Easier typed than done though.
 
-After:
+**After:**
 
 As I thought, setting was not bad at all. I feel like the steps could have been slightly more clear, but overall pretty straight forward. I'll be working on the game's engine tomorrow... I'm nervous but excited to start!
 
 ## Game Engine (Feb 7 - 8)
 
-Before:
+**Before:**
 
 For what ever reason, this part seems to be the most intimidating to me. Creating the game's logic seems hard, but I hope it's not too bad. The goal is to create an empty board in JS, add to the board with X and O rotating beteen turns without choosing occupied spots, and then checking for a winner.
 
-After:
+**After:**
 
 Just finished up the game's logic. I feel like I did a bad job making my code DRY, but I believe I have a functioning board, so that's all I should be worried about right now. The hardest part for me was figuring out a way of checking the board for a winner. I ended up hardcoding every possibility for both players to win, and it works. I even have a way for X and O to switch off anytime the addToBoard function is invoked. Once I meet all requirements, I'll work on a better way of determining the winner.
 
 ## Authentication (Feb 8-9)
 
-Before:
+**Before:**
 
 Now that I'm done with the game's logic (I think), it's time to make some curl requests and start being buddies wiht the API. Making curl requests is a little fuzzy to me, but I hope I could make this work. After I successfully made curl requests to the API to sign up, sign in, change password, and sign out, I have to make sure I get success or failure messages.
 
-After:
+**After:**
 
 Completed the authentication process! Everything went pretty smooth until I got to the change password section. I was able to create a successful curl request, but when I started working on the web app, I kept receiving an error message "Uncaught TypeError: Cannot read property 'id' of undefined." Turns out I wasn't storing tokens and IDs in the store.js file. The legend, William, pointed that out to me and led me in the right direction to fixing the problem. After that, creating a sign out web page was fairly simple.
 
 
 ## Game UI (Feb 9-11)
 
-Before:
+**Before:**
 
 Finally! This is the part I've been looking forward to... Actually making the damn thing. I'm excited to start this part of the project, but I know it's going to be the hardest part thus far.
 
@@ -69,17 +69,17 @@ The goal is to:
 
 Easier typed than done though ^.^
 
-After:
+**After:**
 
 That was A LOT harder than I expected. I had to rework my game engine a little bit to make it work with my user interface... But I got it done. Figuring out what code to use to solve certain problems was pretty challenging. I still got some work to do with the user interface, but for now I need to move to the game's API. Thing's I still need to work on is not repeating code, a better way of resetting the board, and some styling.
 
 ## Game API (Feb 11-13)
 
-Before:
+**Before:**
 
 Time to start probabibly the hardest part of the project... The game's API. I actually do not even know where to start. I know we've done something similar when we did the query-ajax-post training... But I feel like this is on a whole other level. I hope I'm just over thinking it, but here goes nothing :D... -.-
 
-After:
+**After:**
 
 THAT SHIT WAS A FORCE! Seriously though, this was by far the hardest part of the project. At first I thought it was going to be a breeze after successfully being able to create a game, but once I got to updating a game... RIP.
 
@@ -90,10 +90,44 @@ After that, retrieving game statistics wasn't too bad. By far a more productive 
 
 ## Final Touches (Feb 13)
 
-Before:
+**Before:**
 
 Time to make this bitch look nice. I somewhat started styling already, but now that I know everything works, I could really add some flavor to my page. Making it a SPA page may be a little difficult, but I feel like this is the easier part of the project (for me anyways).
 
-After:
+**After:**
 
 Project is done (unless I have to resubmit)! Styling was simple.. I didn't have much time so I had to rush it, but it still came out decent I guess. I had a little trouble making the page responsive, but it still works. The hardest part of styling was making the site into a SPA. Got it done, but I feel like it's still a little buggy. Fow now, I'm over this stupid game lol... But I plan on coming back to this project and changing up the code to make it more presentable.
+
+## Resubmittal (Feb 14)
+
+Overall, I feel like I did a pretty good job on my first project. I tried my best to complete all requirements, but I have a couple of bugs to fix and updates to make on documentation. Here's what I got back from Chris:
+
+Documentation
+- Pin your repository on GitHub as a Popular Repository.
+- List technologies used
+- No list of technologies used.
+
+API Specifications
+ - Update a game by storing new moves. (UPDATE)
+ - Only makes PATCH request once game is entirely over, should update the API after each move
+
+Auth Specifications
+ - All forms must clear after submit success or failure.
+
+I can't lie, I was really hoping to not have to resubmit, but no worries! It's part of the process. "Stay methodical and focused on what you need to fix. Re-submittals are similar to what we deal with on the job when we submit an application to a client or manager. You’ll learn to love the feedback." - Michael Finneran.
+
+On that note, I'll knock out some of the documentation I missed. This project helped me grasp a better understanding of the tools and technologies that were introduced to us.
+
+**My project consists of the following technologies:**
+- HTML
+  - Most of what the user see are html elements. Understanding how html works and what I used it for is key.
+- Sass
+  - A cousin to CSS, SASS stands for Syntactically Awesome Style Sheets. It's a better way of organizing you code by modularizing it.
+- Bootstrap
+  - I used bootstrap for modal templates and styling. Pretty clutch!
+- JavaScript
+  - This is basically what most of my game's logic consisted of. I feel like I got a better understanding of using callbacks, and "this" really saved my butt for a vital function.
+- jQuery
+  - This JavaScript library is pretty damn awesome. It's basically how I communicated between my html, JS, and even Sass files.
+- Ajax
+  - Ajax was used to make my page asynchronous. It was how I communicated with the server for some requests.
