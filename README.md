@@ -21,7 +21,7 @@ I hope to comeup with something similar.
 
 ## Time Line
 
-We're given a week to finish this project. I plan to follow a schedule to keep myself well organized and on the right track. Below is a time line for my project. 
+We're given a week to finish this project. I plan to follow a schedule to keep myself well organized and on the right track. Below is a time line for my project:
 
 |  Date  |             Step              |
 |:--------|:------------------------------:|
@@ -34,7 +34,7 @@ We're given a week to finish this project. I plan to follow a schedule to keep m
 | Feb 14  |    [Resubmittal](#resubmittal-feb-14) |
 | Feb 15 | [Technologies Used](#technologies-used-feb-15) |
 
-If you would like to see the current version of the project, follow this deployment link:  https://ptavarez16.github.io/tic_tac_dro_project/
+If you would like to play the current version of the project, here's the deployment link:  https://ptavarez16.github.io/tic_tac_dro_project/
 
 ## Setting Up (Feb 6)
 

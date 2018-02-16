@@ -24,8 +24,9 @@ const updateGameSuccess = function (data) {
 }
 
 const getGamesSuccess = function (data) {
-  $('#please').text('You\'ve completed ' + data.games.length + ' games!')
   $('#changePasswordSuccess-message').empty()
+  $('#please').empty()
+  $('#please').text('You\'ve completed ' + data.games.length + ' games!')
 }
 
 module.exports = {

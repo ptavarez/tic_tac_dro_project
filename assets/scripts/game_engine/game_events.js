@@ -1,6 +1,8 @@
 'use strict'
 
 const gameStatus = require('../game_api/api.js')
+const gameEvents = require('../game_api/events.js')
+const gameApi = require('../game_api/api.js')
 
 // Create Game Board
 let gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -25,10 +27,10 @@ const playerTurn = function () {
 const turnIndicator = function () {
   if (currentPlayer !== playerOne) {
     $('#playerTwo').empty()
-    $('#playerOne').text('First Player\'s turn')
+    $('#playerOne').text('Player X\'s Turn')
   } else if (currentPlayer === playerOne) {
     $('#playerOne').empty()
-    $('#playerTwo').text('Second Player\'s Turn')
+    $('#playerTwo').text('Player O\'s Turn')
   }
 }
 
@@ -256,6 +258,8 @@ const topLeft = function () {
   if ($('#top-left').text() === '') {
     $('#top-left').text(currentPlayer)
     gameBoard.splice(0, 1, currentPlayer)
+    gameApi.updateGameMove($('#top-left').data('cellIndex'), currentPlayer)
+    // gameEvents.onUpdateGame()
   } else {
     moveMade()
     playerTurn()
@@ -267,6 +271,7 @@ const top = function () {
   if ($('#top').text() === '') {
     $('#top').text(currentPlayer)
     gameBoard.splice(1, 1, currentPlayer)
+    gameApi.updateGameMove($('#top').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -278,6 +283,7 @@ const topRight = function () {
   if ($('#top-right').text() === '') {
     $('#top-right').text(currentPlayer)
     gameBoard.splice(2, 1, currentPlayer)
+    gameApi.updateGameMove($('#top-right').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -289,6 +295,7 @@ const middleLeft = function () {
   if ($('#middle-left').text() === '') {
     $('#middle-left').text(currentPlayer)
     gameBoard.splice(3, 1, currentPlayer)
+    gameApi.updateGameMove($('#middle-left').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -300,6 +307,7 @@ const middle = function () {
   if ($('#middle').text() === '') {
     $('#middle').text(currentPlayer)
     gameBoard.splice(4, 1, currentPlayer)
+    gameApi.updateGameMove($('#middle').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -311,6 +319,7 @@ const middleRight = function () {
   if ($('#middle-right').text() === '') {
     $('#middle-right').text(currentPlayer)
     gameBoard.splice(5, 1, currentPlayer)
+    gameApi.updateGameMove($('#middle-right').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -322,6 +331,7 @@ const bottomLeft = function () {
   if ($('#bottom-left').text() === '') {
     $('#bottom-left').text(currentPlayer)
     gameBoard.splice(6, 1, currentPlayer)
+    gameApi.updateGameMove($('#bottom-left').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -333,6 +343,7 @@ const bottom = function () {
   if ($('#bottom').text() === '') {
     $('#bottom').text(currentPlayer)
     gameBoard.splice(7, 1, currentPlayer)
+    gameApi.updateGameMove($('#bottom').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
@@ -344,6 +355,7 @@ const bottomRight = function () {
   if ($('#bottom-right').text() === '') {
     $('#bottom-right').text(currentPlayer)
     gameBoard.splice(8, 1, currentPlayer)
+    gameApi.updateGameMove($('#bottom-right').data('cellIndex'), currentPlayer)
   } else {
     moveMade()
     playerTurn()
