@@ -48,8 +48,8 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#changePasswordSuccess-message').text('Changed Password Successfully!')
-  $('#changePassword-message').css('color', 'green')
+  $('#please').text('Changed Password Successfully!')
+  $('#please').css('color', 'green')
   $('#signInSuccess-message').empty()
   $('#signOut-message').empty()
   $('#changePassword-message').empty()

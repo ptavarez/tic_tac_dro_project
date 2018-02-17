@@ -16,7 +16,6 @@ const createGame = function (data) {
 }
 
 const updateGameMove = function (index, currentPlayer) {
-  console.log(index, currentPlayer)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
