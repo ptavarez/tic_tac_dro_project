@@ -151,3 +151,9 @@ This project helped me grasp a better understanding of the tools and technologie
   - This JavaScript library is pretty damn awesome. It's basically how I communicated between my html, JS, and even Sass files.
 - Ajax
   - Ajax was used to make my page asynchronous. It was how I communicated with the server for some requests.
+
+## Final Verdict
+
+After resubmitting my project, I felt pretty confident that I met all the requirements...
+
+I just got the final verdict from Chris... I passed! Feels great getting my first project out of the way. Now off to project number 2!

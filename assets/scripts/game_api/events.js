@@ -3,23 +3,6 @@
 const gameApi = require('./api.js')
 const gameUi = require('./ui.js')
 const store = ('./../store.js')
-// const gameEngine = ('../game_engine/game_events.js')
-
-// Create Players
-const playerOne = 'X'
-const playerTwo = 'O'
-
-// First player is always X
-let currentPlayer = playerTwo
-
-// Way of switching between playerOne and playerTwo
-const playerTurn = function () {
-  if (currentPlayer === playerOne) {
-    currentPlayer = playerTwo
-  } else {
-    currentPlayer = playerOne
-  }
-}
 
 const onCreateGame = function (event) {
   event.preventDefault()
