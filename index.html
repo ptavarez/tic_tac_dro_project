@@ -81,15 +81,13 @@
   <div class="main">
     <div>
       <!-- Start New Game Button -->
-      <form id="create-game" class="border">
         <p id="create-game-message"></p>
-        <fieldset>
-          <input type="submit" value="Start New Game" class="sign-in-success btn btn-primary">
-        </fieldset>
-      </form>
+          <button id="create-game" value="Start New Game" class="sign-in-success new-game border btn btn-primary">
+            New Game
+          </button>
       <br>
       <!-- Change Password Modal Button -->
-      <button type="button" class="sign-in-success btn btn-primary" data-toggle="modal" data-target="#change-password-modal">
+      <button type="button" class="sign-in-success change btn btn-primary" data-toggle="modal" data-target="#change-password-modal">
         Change Password
       </button>
       <!-- Change Password Modal -->
@@ -119,38 +117,36 @@
     <!-- Sign Out Button -->
     <form id="sign-out" class="border">
       <fieldset>
-        <input type="submit" value="Sign Out" class="sign-in-success btn btn-primary">
+        <input type="submit" value="Sign Out" class="sign-in-success out btn btn-primary">
       </fieldset>
     </form>
-      <!-- Game Board -->
-      <div class="game_messages">
-        <p class="messages" id="playerOne">Player X's Turn</p>
-        <p class="messages" id="playerTwo"></p>
+      <div class="gameboard">
+        <!-- Game Board -->
+        <div class="game_messages">
+          <p class="messages" id="playerOne">Player X's Turn</p>
+          <p class="messages" id="playerTwo"></p>
+        </div>
+        <table>
+        <tr>
+            <td data-cell-index='0' id="top-left"></td>
+            <td data-cell-index='1' id="top"></td>
+            <td data-cell-index='2' id="top-right"></td>
+        </tr>
+          <tr>
+              <td data-cell-index='3' id="middle-left"></td>
+              <td data-cell-index='4' id="middle"></td>
+              <td data-cell-index='5' id="middle-right"></td>
+          </tr>
+          <tr>
+              <td data-cell-index='6' id="bottom-left"></td>
+              <td data-cell-index='7' id="bottom"></td>
+              <td data-cell-index='8' id="bottom-right"></td>
+          </tr>
+       </table>
       </div>
-      <table>
-      <tr>
-          <td data-cell-index='0' id="top-left"></td>
-          <td data-cell-index='1' id="top"></td>
-          <td data-cell-index='2' id="top-right"></td>
-      </tr>
-        <tr>
-            <td data-cell-index='3' id="middle-left"></td>
-            <td data-cell-index='4' id="middle"></td>
-            <td data-cell-index='5' id="middle-right"></td>
-        </tr>
-        <tr>
-            <td data-cell-index='6' id="bottom-left"></td>
-            <td data-cell-index='7' id="bottom"></td>
-            <td data-cell-index='8' id="bottom-right"></td>
-        </tr>
-     </table>
-     <!-- Completed Games Button -->
-     <form id="get-game" class="border">
-       <p id="get-game-message"></p>
-       <fieldset>
-         <input type="submit" value="Completed Games" class="btn btn-primary btn">
-       </fieldset>
-     </form>
+       <!-- Completed Games Button -->
+         <p id="get-game-message"></p>
+           <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
    </div>
-    </body>
+  </body>
 </html>
