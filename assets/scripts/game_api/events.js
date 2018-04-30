@@ -18,8 +18,8 @@ const onGetGames = function (event) {
 }
 
 const gameHandlers = () => {
-  $('#create-game').on('submit', onCreateGame)
-  $('#get-game').on('submit', onGetGames)
+  $('#create-game').on('click', onCreateGame)
+  $('#get-game').on('click', onGetGames)
 }
 
 module.exports = {
