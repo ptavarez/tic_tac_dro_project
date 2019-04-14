@@ -3,11 +3,10 @@ const store = require('../store')
 // TODO find a way to have to modal disappear after success
 
 const signUpSuccess = function (data) {
-  $('#signUpSuccess-message').text('Signed Up Successfully!')
+  $('#notification').text('Signed Up Successfully!')
   $('#signUp-message').css('background-color', 'green')
   $('#signUp-message').css('color', 'black')
   $('#sign-up-modal').modal('hide')
-  $('#signOut-message').empty()
   $('#signUp-message').empty()
   $('.sign-up-form').get(0).reset()
 }
@@ -22,7 +21,7 @@ const signUpFailure = function (error) {
 // TODO find a way of reloading modal without reloading page
 
 const signInSuccess = function (data) {
-  $('#signInSuccess-message').text('Signed In Successfully!')
+  $('#notification').text('Signed In Successfully!')
   $('#signIn-message').css('background-color', 'green')
   store.user = data.user
   $('#sign-in-modal').modal('hide')
@@ -31,11 +30,9 @@ const signInSuccess = function (data) {
   $('table').hide()
   $('#messages').hide()
   $('#playerOne').hide()
-  $('#signOut-message').empty()
   $('#signIn-message').empty()
   $('#changePassword-message').empty()
   $('#signUp-message').empty()
-  $('#signUpSuccess-message').empty()
   $('.sign-in-form').get(0).reset()
 }
 
@@ -48,10 +45,8 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#please').text('Changed Password Successfully!')
-  $('#please').css('color', 'green')
-  $('#signInSuccess-message').empty()
-  $('#signOut-message').empty()
+  $('#notification').text('Changed Password Successfully!')
+  $('#notification').css('color', 'green')
   $('#changePassword-message').empty()
   $('#change-password-modal').modal('hide')
   $('.change-password-form').get(0).reset()
@@ -66,20 +61,16 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function (data) {
-  $('#signOut-message').text('Signed Out Successfully!')
+  $('#notification').text('Signed Out Successfully!')
   $('.main-page').show()
   $('.main').hide()
   $('table').hide()
-  // $('p').hide()
   $('#get-game').hide()
-  $('#please').empty()
-  $('#signInSuccess-message').empty()
-  $('#changePasswordSuccess-message').empty()
 }
 
 const signOutFailure = function (error) {
-  $('#signOut-message').text('Already Signed Out')
-  $('#signOut-message').css('background-color', 'red')
+  $('#notification').text('Already Signed Out')
+  $('#notification').css('background-color', 'red')
   console.log(error)
 }
 
