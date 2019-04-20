@@ -1,8 +1,6 @@
 'use strict'
-
-const currentPlayer = 'X'
-const gameBoard = Array(9).fill(null)
-const moveCount = null
+const playerX = 'X'
+const playerO = 'O'
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -13,10 +11,11 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6]
 ]
+const newBoard = Array(9).fill(null)
 
 module.exports = {
-  currentPlayer,
-  gameBoard,
-  moveCount,
-  winningCombinations
+  playerX,
+  playerO,
+  winningCombinations,
+  newBoard
 }

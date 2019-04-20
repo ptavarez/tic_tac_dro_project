@@ -1,9 +1,8 @@
 'use strict'
-
 const config = require('../config')
 const store = require('../store')
 
-const createGame = function (data) {
+const createGame = data => {
   return $.ajax({
     url: config.apiOrigin + '/games/',
     method: 'POST',
@@ -15,7 +14,7 @@ const createGame = function (data) {
   })
 }
 
-const updateGameMove = function (index, currentPlayer) {
+const updateGameMove = (index, currentPlayer) => {
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -34,7 +33,7 @@ const updateGameMove = function (index, currentPlayer) {
   })
 }
 
-const updateGameStatus = function () {
+const updateGameStatus = () => {
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -50,7 +49,7 @@ const updateGameStatus = function () {
   })
 }
 
-const getGames = function (data) {
+const getGames = data => {
   return $.ajax({
     url: config.apiOrigin + '/games?over=true',
     method: 'GET',

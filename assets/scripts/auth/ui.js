@@ -1,8 +1,7 @@
+'use strict'
 const store = require('../store')
 
-// TODO find a way to have to modal disappear after success
-
-const signUpSuccess = function (data) {
+const signUpSuccess = data => {
   $('#notification').text('Signed Up Successfully!')
   $('#signUp-message').css('background-color', 'green')
   $('#signUp-message').css('color', 'black')
@@ -11,16 +10,15 @@ const signUpSuccess = function (data) {
   $('.sign-up-form').get(0).reset()
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = error => {
   $('#signUp-message').text('Sign Up Error')
   $('#signUp-message').css('background-color', 'red')
   $('#signUp-message').css('color', 'black')
   $('.sign-up-form').get(0).reset()
   console.error(error)
 }
-// TODO find a way of reloading modal without reloading page
 
-const signInSuccess = function (data) {
+const signInSuccess = data => {
   $('#notification').text('Signed In Successfully!')
   $('#signIn-message').css('background-color', 'green')
   store.user = data.user
@@ -29,14 +27,14 @@ const signInSuccess = function (data) {
   $('.main').show()
   $('table').hide()
   $('#messages').hide()
-  $('#playerOne').hide()
+  $('#playerX').hide()
   $('#signIn-message').empty()
   $('#changePassword-message').empty()
   $('#signUp-message').empty()
   $('.sign-in-form').get(0).reset()
 }
 
-const signInFailure = function (error) {
+const signInFailure = error => {
   $('#signIn-message').text('The username/password you entered do not match. Please try again.')
   $('#signIn-message').css('background-color', 'red')
   $('#signIn-message').css('color', 'black')
@@ -44,7 +42,7 @@ const signInFailure = function (error) {
   console.error(error)
 }
 
-const changePasswordSuccess = function (data) {
+const changePasswordSuccess = data => {
   $('#notification').text('Changed Password Successfully!')
   $('#notification').css('color', 'green')
   $('#changePassword-message').empty()
@@ -52,7 +50,7 @@ const changePasswordSuccess = function (data) {
   $('.change-password-form').get(0).reset()
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = error => {
   $('#changePassword-message').text('Password Change Unsuccessful')
   $('#changePassword-message').css('background-color', 'red')
   $('#changePassword-message').css('color', 'black')
@@ -60,7 +58,7 @@ const changePasswordFailure = function (error) {
   console.error(error)
 }
 
-const signOutSuccess = function (data) {
+const signOutSuccess = data => {
   $('#notification').text('Signed Out Successfully!')
   $('.main-page').show()
   $('.main').hide()
@@ -68,7 +66,7 @@ const signOutSuccess = function (data) {
   $('#get-game').hide()
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = error => {
   $('#notification').text('Already Signed Out')
   $('#notification').css('background-color', 'red')
   console.log(error)
