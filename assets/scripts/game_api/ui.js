@@ -1,36 +1,19 @@
 'use strict'
-
 const store = require('../store')
-const gameMove = ('../game_engine/game_events.js')
+const { notificationId } = require('../helpers')
 
-const createGameSuccess = function (data) {
-  $('#please').text('Let\'s Play Some Tic-Tac-Dro ^.^')
+const createGameSuccess = data => {
+  $(notificationId).text(`Let's Play Some Tic-Tac-Dro ^.^`)
   store.game = data.game
-  $('table').show()
-  $('#playerOne').show()
-  $('#playerTwo').show()
-  $('#get-game').show()
-  $('.game-nav').show()
-  $('p').show()
-  $('.sign-in-success').hide()
-  $('#signInSuccess-message').empty()
-  $('#changePasswordSuccess-message').empty()
+  $('.gameboard').show()
+  $('.main').hide()
 }
 
-const updateGameSuccess = function (data) {
-  $('#please').text('Game Updated Successfully')
-  store.game.value = gameMove.currentPlayer
-  store.game.over = false
-}
-
-const getGamesSuccess = function (data) {
-  $('#changePasswordSuccess-message').empty()
-  $('#please').empty()
-  $('#please').text('You\'ve completed ' + data.games.length + ' games!')
+const getGamesSuccess = data => {
+  $(notificationId).text('You\'ve completed ' + data.games.length + ' games!')
 }
 
 module.exports = {
   createGameSuccess,
-  updateGameSuccess,
   getGamesSuccess
 }

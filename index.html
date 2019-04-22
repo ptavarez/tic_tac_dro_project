@@ -15,11 +15,7 @@
     <header>
       <h1>Tic-Tac-Dro</h1>
     </header>
-    <p id="please"></p>
-    <p id="signOut-message"></p>
-    <p id="signInSuccess-message"></p>
-    <p id="signUpSuccess-message"></p>
-    <p id="changePasswordSuccess-message"></p>
+    <p id="notification"></p>
     <div class="sign-in-page">
       <!-- Sign In Modal Button -->
       <button type="button" class="main-page btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">
@@ -78,7 +74,8 @@
         </div>
       </div>
     </div>
-  <div class="main">
+  <div>
+    <div class="main">
     <div>
       <!-- Start New Game Button -->
         <p id="create-game-message"></p>
@@ -120,13 +117,12 @@
         <input type="submit" value="Sign Out" class="sign-in-success out btn btn-primary">
       </fieldset>
     </form>
+    <!-- Completed Games Button -->
+    <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
+  </div>
+    <!-- Game Board -->
       <div class="gameboard">
-        <!-- Game Board -->
-        <div class="game_messages">
-          <p class="messages" id="playerOne">Player X's Turn</p>
-          <p class="messages" id="playerTwo"></p>
-        </div>
-        <table>
+        <table id="gameboard">
         <tr>
             <td data-cell-index='0' id="top-left"></td>
             <td data-cell-index='1' id="top"></td>
@@ -143,10 +139,8 @@
               <td data-cell-index='8' id="bottom-right"></td>
           </tr>
        </table>
+       <button id="quit-game" value="Quit Game" class="quit border btn btn-primary btn">Quit Game</button>
       </div>
-       <!-- Completed Games Button -->
-         <p id="get-game-message"></p>
-           <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
    </div>
   </body>
 </html>

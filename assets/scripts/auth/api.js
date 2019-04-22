@@ -1,9 +1,8 @@
 'use strict'
-
 const config = require('../config')
 const store = require('../store')
 
-const signUp = function (data) {
+const signUp = data => {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
@@ -14,7 +13,7 @@ const signUp = function (data) {
   })
 }
 
-const signIn = function (data) {
+const signIn = data => {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
@@ -25,9 +24,9 @@ const signIn = function (data) {
   })
 }
 
-const changePassword = function (data) {
+const changePassword = data => {
   return $.ajax({
-    url: config.apiOrigin + '/change-password/' + store.user.id,
+    url: config.apiOrigin + '/change-password',
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
@@ -37,9 +36,9 @@ const changePassword = function (data) {
   })
 }
 
-const signOut = function () {
+const signOut = () => {
   return $.ajax({
-    url: config.apiOrigin + '/sign-out/' + store.user.id,
+    url: config.apiOrigin + '/sign-out',
     method: 'DELETE',
     headers: {
       contentType: 'application/json',
