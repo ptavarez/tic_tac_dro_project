@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Dro</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+    <header>
+      <h1>Tic-Tac-Dro</h1>
+    </header>
+    <p id="notification"></p>
+    <div class="sign-in-page">
+      <!-- Sign In Modal Button -->
+      <button type="button" class="main-page btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">
+        Sign In
+      </button>
+      <!-- Sign In Modal -->
+      <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+            </div>
+            <div class="modal-body">
+              <p id="signIn-message"></p>
+              <form class="sign-in-form">
+                <div class="form-group">
+                <label class="sr-only" for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="signin_email" placeholder="Email" name="credentials[email]">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control" id="signin_password" placeholder="Password" name="credentials[password]">
+                <button type="submit" class="btn btn-default">Sign In</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign Up Modal Button -->
+      <button type="button" class="main-page btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
+        Sign Up
+      </button>
+      <!-- Sign Up Modal -->
+      <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Sign up</h4>
+            </div>
+            <div class="modal-body">
+              <p id="signUp-message"></p>
+              <form class="sign-up-form">
+                <div class="form-group">
+                <label class="sr-only" for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="signup_email" placeholder="Email" name="credentials[email]">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control" id="signup_password" placeholder="Password" name="credentials[password]">
+                <label class="sr-only" for="password">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password" name="credentials[password_confirmation]">
+                <button type="submit" class="btn btn-default">Sign up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div>
+    <div class="main">
+    <div>
+      <!-- Start New Game Button -->
+        <p id="create-game-message"></p>
+          <button id="create-game" value="Start New Game" class="sign-in-success new-game border btn btn-primary">
+            New Game
+          </button>
+      <br>
+      <!-- Change Password Modal Button -->
+      <button type="button" class="sign-in-success change btn btn-primary" data-toggle="modal" data-target="#change-password-modal">
+        Change Password
+      </button>
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <p id="changePassword-message"></p>
+              <form class="change-password-form">
+                <div class="form-group">
+                <label class="sr-only" for="password">Old Password</label>
+                <input type="password" class="form-control" id="change_old_password" placeholder="Old Password" name="passwords[old]">
+                <label class="sr-only" for="password">New Password</label>
+                <input type="password" class="form-control" id="change_new_password" placeholder="New Password" name="passwords[new]">
+                <button type="submit" class="btn btn-default">Change Password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign Out Button -->
+    <form id="sign-out" class="border">
+      <fieldset>
+        <input type="submit" value="Sign Out" class="sign-in-success out btn btn-primary">
+      </fieldset>
+    </form>
+    <!-- Completed Games Button -->
+    <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
+  </div>
+    <!-- Game Board -->
+      <div class="gameboard">
+        <table id="gameboard">
+        <tr>
+            <td data-cell-index='0' id="top-left"></td>
+            <td data-cell-index='1' id="top"></td>
+            <td data-cell-index='2' id="top-right"></td>
+        </tr>
+          <tr>
+              <td data-cell-index='3' id="middle-left"></td>
+              <td data-cell-index='4' id="middle"></td>
+              <td data-cell-index='5' id="middle-right"></td>
+          </tr>
+          <tr>
+              <td data-cell-index='6' id="bottom-left"></td>
+              <td data-cell-index='7' id="bottom"></td>
+              <td data-cell-index='8' id="bottom-right"></td>
+          </tr>
+       </table>
+       <button id="quit-game" value="Quit Game" class="quit border btn btn-primary btn">Quit Game</button>
+      </div>
+   </div>
+  </body>
+</html>
