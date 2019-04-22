@@ -23,7 +23,8 @@
   background: $navy;
 }
 
-.main {
+.main,
+.gameboard {
   display: none;
 }
 
@@ -34,7 +35,8 @@
 }
 
 .sign-in-success,
-.complete {
+.complete,
+.quit {
   height: 100px;
   margin: 20px;
   width: 400px;
@@ -84,7 +86,8 @@ body {
     transform: translate(-50%, -50%);
   }
 
-  .complete {
+  .complete,
+  .quit {
     left: 46%;
     padding: 10px;
     position: absolute;
@@ -106,7 +109,8 @@ body {
     top: 60%;
   }
 
-  .complete {
+  .complete,
+  .quit {
     top: 90%;
   }
 }

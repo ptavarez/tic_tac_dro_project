@@ -1,75 +1,82 @@
 'use strict'
 const store = require('../store')
+const {
+  notificationId,
+  signUpMessageId,
+  signUpFormClass,
+  signUpModal,
+  signInMessageId,
+  signInFormClass,
+  signInModal,
+  changePasswordModal,
+  changePasswordForm,
+  changePasswordMessageId,
+  notificationTimeout,
+  hideModal,
+  resetForm
+} = require('../helpers')
 
 const signUpSuccess = data => {
-  $('#notification').text('Signed Up Successfully!')
-  $('#signUp-message').css('background-color', 'green')
-  $('#signUp-message').css('color', 'black')
-  $('#sign-up-modal').modal('hide')
-  $('#signUp-message').empty()
-  $('.sign-up-form').get(0).reset()
+  $(notificationId).text('Signed Up Successfully!')
+  hideModal(signUpModal)
+  $(signUpFormClass).get(0).reset()
+  notificationTimeout(notificationId)
 }
 
 const signUpFailure = error => {
-  $('#signUp-message').text('Sign Up Error')
-  $('#signUp-message').css('background-color', 'red')
-  $('#signUp-message').css('color', 'black')
-  $('.sign-up-form').get(0).reset()
-  console.error(error)
+  $(signUpMessageId).text('Sign Up Error')
+  $(signUpMessageId).css('background-color', 'red')
+  $(signUpMessageId).css('color', 'black')
+  resetForm(signUpFormClass)
+  notificationTimeout(signUpMessageId)
+  return error
 }
 
 const signInSuccess = data => {
-  $('#notification').text('Signed In Successfully!')
-  $('#signIn-message').css('background-color', 'green')
   store.user = data.user
-  $('#sign-in-modal').modal('hide')
-  $('.main-page').hide()
+  hideModal(signInModal)
+  resetForm(signInFormClass)
+  $('.sign-in-page').hide()
   $('.main').show()
-  $('table').hide()
-  $('#messages').hide()
-  $('#playerX').hide()
-  $('#signIn-message').empty()
-  $('#changePassword-message').empty()
-  $('#signUp-message').empty()
-  $('.sign-in-form').get(0).reset()
 }
 
 const signInFailure = error => {
-  $('#signIn-message').text('The username/password you entered do not match. Please try again.')
-  $('#signIn-message').css('background-color', 'red')
-  $('#signIn-message').css('color', 'black')
-  $('.sign-in-form').get(0).reset()
-  console.error(error)
-}
-
-const changePasswordSuccess = data => {
-  $('#notification').text('Changed Password Successfully!')
-  $('#notification').css('color', 'green')
-  $('#changePassword-message').empty()
-  $('#change-password-modal').modal('hide')
-  $('.change-password-form').get(0).reset()
-}
-
-const changePasswordFailure = error => {
-  $('#changePassword-message').text('Password Change Unsuccessful')
-  $('#changePassword-message').css('background-color', 'red')
-  $('#changePassword-message').css('color', 'black')
-  $('.change-password-form').get(0).reset()
-  console.error(error)
+  $(signInMessageId).text('The username/password you entered do not match. Please try again.')
+  $(signInMessageId).css('background-color', 'red')
+  $(signInMessageId).css('color', 'black')
+  resetForm(signInFormClass)
+  notificationTimeout(signInMessageId)
+  return error
 }
 
 const signOutSuccess = data => {
-  $('#notification').text('Signed Out Successfully!')
-  $('.main-page').show()
+  notificationTimeout(notificationId)
   $('.main').hide()
-  $('table').hide()
-  $('#get-game').hide()
+  $('.sign-in-page').show()
 }
 
 const signOutFailure = error => {
-  $('#notification').text('Already Signed Out')
-  $('#notification').css('background-color', 'red')
-  console.log(error)
+  $(notificationId).text('Already Signed Out')
+  $(notificationId).css('background-color', 'red')
+  notificationTimeout(notificationId)
+  return error
+}
+
+const changePasswordSuccess = data => {
+  $(notificationId).text('Changed Password Successfully!')
+  $(notificationId).css('color', 'green')
+  notificationTimeout(notificationId)
+  hideModal(changePasswordModal)
+  resetForm(changePasswordForm)
+}
+
+const changePasswordFailure = error => {
+  $(changePasswordMessageId).text('Password Change Unsuccessful')
+  $(changePasswordMessageId).css('background-color', 'red')
+  $(changePasswordMessageId).css('color', 'black')
+  notificationTimeout(changePasswordMessageId)
+  resetForm(changePasswordForm)
+  return error
 }
 
 module.exports = {

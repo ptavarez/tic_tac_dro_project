@@ -74,7 +74,8 @@
         </div>
       </div>
     </div>
-  <div class="main">
+  <div>
+    <div class="main">
     <div>
       <!-- Start New Game Button -->
         <p id="create-game-message"></p>
@@ -116,6 +117,9 @@
         <input type="submit" value="Sign Out" class="sign-in-success out btn btn-primary">
       </fieldset>
     </form>
+    <!-- Completed Games Button -->
+    <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
+  </div>
     <!-- Game Board -->
       <div class="gameboard">
         <table id="gameboard">
@@ -135,10 +139,8 @@
               <td data-cell-index='8' id="bottom-right"></td>
           </tr>
        </table>
+       <button id="quit-game" value="Quit Game" class="quit border btn btn-primary btn">Quit Game</button>
       </div>
-       <!-- Completed Games Button -->
-         <p id="get-game-message"></p>
-           <button id="get-game" value="Completed Games" class="complete border btn btn-primary btn">Completed Games</button>
    </div>
   </body>
 </html>

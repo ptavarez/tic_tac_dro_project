@@ -1,19 +1,18 @@
 'use strict'
-const gameApi = require('./api.js')
-const gameUi = require('./ui.js')
-const store = ('./../store.js')
+const { createGame, getGames } = require('./api.js')
+const { createGameSuccess, getGamesSuccess } = require('./ui.js')
 
 const onCreateGame = event => {
   event.preventDefault()
   $('td').empty()
-  gameApi.createGame(store)
-    .then(gameUi.createGameSuccess)
+  createGame()
+    .then(createGameSuccess)
 }
 
 const onGetGames = event => {
   event.preventDefault()
-  gameApi.getGames()
-    .then(gameUi.getGamesSuccess)
+  getGames()
+    .then(getGamesSuccess)
 }
 
 const gameHandlers = () => {

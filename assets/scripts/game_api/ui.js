@@ -1,32 +1,19 @@
 'use strict'
 const store = require('../store')
-const gameMove = ('../game_engine/logic.js')
+const { notificationId } = require('../helpers')
 
 const createGameSuccess = data => {
-  $('#notification').text(`Let's Play Some Tic-Tac-Dro ^.^`)
-  setTimeout(() => {
-    $('#notification').text(`Player X's Turn`)
-  }, 2000)
+  $(notificationId).text(`Let's Play Some Tic-Tac-Dro ^.^`)
   store.game = data.game
-  $('table').show()
-  $('#get-game').show()
-  $('.game-nav').show()
-  $('p').show()
-  $('.sign-in-success').hide()
-}
-
-const updateGameSuccess = data => {
-  $('#notification').text('Game Updated Successfully')
-  store.game.value = gameMove.currentPlayer
-  store.game.over = false
+  $('.gameboard').show()
+  $('.main').hide()
 }
 
 const getGamesSuccess = data => {
-  $('#notification').text('You\'ve completed ' + data.games.length + ' games!')
+  $(notificationId).text('You\'ve completed ' + data.games.length + ' games!')
 }
 
 module.exports = {
   createGameSuccess,
-  updateGameSuccess,
   getGamesSuccess
 }

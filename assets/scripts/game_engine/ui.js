@@ -1,25 +1,30 @@
 'use strict'
+const { notificationId, notificationTimeout } = require('../helpers')
+
 const playTurnUi = currentPlayer => {
-  $('#notification').text(`Player ${currentPlayer}'s Turn`)
+  $(notificationId).text(`Player ${currentPlayer}'s Turn`)
 }
 
 const clearNotifications = () => {
-  $('#notification').empty()
+  $(notificationId).empty()
 }
 
 const endGame = () => {
   $('td').empty()
-  $('.game-nav').hide()
-  $('table').hide()
-  $('.sign-in-success').show()
+  $('.gameboard').hide()
+  $('.main').show()
 }
 
 const gameWinMessage = winner => {
-  $('#notification').text(winner)
+  if (winner) {
+    $(notificationId).text(winner)
+    notificationTimeout(notificationId)
+  }
 }
 
-const moveMade = function () {
-  $('#notification').text('Move Made')
+const moveMade = () => {
+  $(notificationId).text('Move Made')
+  notificationTimeout(notificationId)
 }
 
 module.exports = {

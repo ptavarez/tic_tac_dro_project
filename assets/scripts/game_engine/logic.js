@@ -12,7 +12,7 @@ const {
   playerX,
   playerO,
   newBoard
-} = require('./helpers')
+} = require('../helpers')
 
 let gameBoard = newBoard
 let currentPlayer = playerX
@@ -30,15 +30,14 @@ const playerTurn = () => {
 }
 
 const gameOverStatus = () => {
+  endGame()
   moveCount = null
   clearNotifications()
   gameBoard = newBoard
-  endGame()
 }
 
 const gameWinner = () => {
   let winningMessage
-  moveCount++
   winningCombinations.forEach(combinations => {
     const [a, b, c] = combinations
     if (gameBoard[a] &&
@@ -63,18 +62,27 @@ const onMove = square => {
     $(square).text(currentPlayer)
     gameBoard[index] = currentPlayer
     updateGameMove(index, currentPlayer)
+    playerTurn()
   } else {
     moveMade()
-    playerTurn()
     moveCount--
+    setTimeout(() => {
+      playTurnUi(currentPlayer)
+    }, 3000)
   }
 }
 
 const clickHandlers = () => {
   $('#gameboard td').on('click', function () {
+    moveCount++
     onMove(this)
-    playerTurn()
-    gameWinMessage(gameWinner)
+    if (moveCount > 4) {
+      gameWinMessage(gameWinner())
+    }
+  })
+  $('#quit-game').on('click', () => {
+    updateGameStatus()
+    gameOverStatus()
   })
 }
 
